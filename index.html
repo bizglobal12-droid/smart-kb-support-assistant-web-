@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart KB Support Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar: Knowledge Base & Guardrails Info -->
+        <aside class="sidebar">
+            <h2>🛡️ KB & Guardrails</h2>
+            <p class="subtitle">Client-Side RAG Engine</p>
+            
+            <div class="kb-section">
+                <h3>Indexed Documents</h3>
+                <ul id="kb-list">
+                    <li>📄 return_policy.md</li>
+                    <li>📄 shipping_faq.md</li>
+                    <li>📄 account_security.md</li>
+                </ul>
+            </div>
 
+            <div class="guardrail-status">
+                <h3>Active Guardrails</h3>
+                <div class="badge">✓ PII Masking Active</div>
+                <div class="badge">✓ Zero Hallucination Mode</div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <header class="chat-header">
+                <h1>🤖 Customer Support Assistant</h1>
+                <span class="status-indicator">Online</span>
+            </header>
+
+            <div id="chat-messages" class="chat-messages">
+                <div class="message assistant-message">
+                    <div class="message-content">
+                        Hello! I am your AI Support Assistant backed by official company knowledge. How can I help you today?
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="user-input" placeholder="Type your question here (e.g., What is your return policy?)..." autocomplete="off">
+                <button id="send-btn">Send</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
